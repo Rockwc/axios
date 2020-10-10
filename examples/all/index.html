@@ -20,7 +20,7 @@
       <ul id="orgs" class="list-unstyled"></ul>
     </div>
 
-    <script src="/axios.min.js"></script>
+    <script src="../../dist/axios.min.js"></script>
     <script>
       axios.all([
         axios.get('https://api.github.com/users/mzabriskie'),
@@ -39,6 +39,20 @@
           );
         }).join('');
       }));
+
+      // Promise.all([
+      //   axios.get('https://api.github.com/users/mzabriskie'),
+      //   axios.get('https://api.github.com/users/mzabriskie/orgs')
+      // ]).then(data=>{
+      //   console.log(data, 'Promise.all')
+      // })
+
+      // Promise.race([
+      //   axios.get('https://api.github.com/users/mzabriskie'),
+      //   axios.get('https://api.github.com/users/mzabriskie/orgs')
+      // ]).then(data=>{
+      //   console.log(data, 'Promise.race')
+      // })
     </script>
   </body>
 </html>
